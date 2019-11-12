@@ -1,4 +1,4 @@
-// ==== Objects ====
+// ==== Objects ====  DONE
 
 /* 
   Given the following information about dinosaurs, create 3 objects: 
@@ -68,7 +68,7 @@ const graduates = [
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array. This will be an array of strings.
 
 
-Once you have the new array created, sort the universities alphabetically and log the result. */
+// DONE*** Once you have the new array created, sort the universities alphabetically and log the result. */ 
 
 const universities = [];
 
@@ -85,20 +85,22 @@ console.log(universities);
 The resulting contact information strings should have a space between the first name and the email, like this: 
 "Josh josh@example.com"
 
-Log the result of your new array. */
+DONE***Log the result of your new array. */
+
 const contactInfo = [];
 for(i = 0; i < graduates.length; i++) {
   contactInfo.push(`${graduates[i].first_name} " " ${graduates[i].email} `);
 }
 console.log(contactInfo);
 
-/* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
+/*  DONE ***Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
+
 const unisWithUni = [];
 for(i = 0; i < graduates.length; i++) {
-  graduates[i].university;
-  if (university === Uni)
-    unisWithUni.push(graduates[i].university);
-}
+ if (graduates[i].university.includes ("Uni"))
+   unisWithUni.push(graduates[i]);
+ }
+
 console.log(unisWithUni);
 
 
@@ -121,14 +123,22 @@ const zooAnimals = [
 
 /* Request 1: .forEach()
 
-The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
+DONE*** The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-// NOT DONE
+
+const displayNames = [];
+zooAnimals.forEach(item =>
+ { displayNames.push(`Name: ${item.animal_name}, Scientific: ${item.scientific_name}.`)
+});
+
+console.log(displayNames);
+
+
 
 /* Request 2: .map()
 
-The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
+DONE *** The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
 
 */
 
@@ -144,7 +154,10 @@ console.log(lowCaseAnimalNames);
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
+const lowPopulationAnimals = [];
+zooAnimals.filter(population => 
 
+console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 
 
