@@ -17,7 +17,17 @@ function consume(a,b,cb) {
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
+function add(a,b) {
+  return a + b;
+}
 
+function multiply(a,b) {
+  return a * b;
+}
+
+function greeting(firstName, lastName) {
+  return `Hello ${firstName} ${lastName}, nice to meet you!`;
+}
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 // console.log(consume(2, 2, add)); // 4
@@ -25,7 +35,7 @@ function consume(a,b,cb) {
 // console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
-// ==== Closures ==== 
+// ==== Closures ==== STRETCH
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
